@@ -1,5 +1,3 @@
-const BikeList = () => {
-  return <div>Bike kist!</div>
-}
+const BikeList = () => <div>Bike kist!</div>;
 
 export default BikeList;

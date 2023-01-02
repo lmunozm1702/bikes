@@ -5,12 +5,12 @@ function getBikes(payload) {
   console.log('payload', payload);
   return {
     type: GET_BIKES,
-    payload
-  }
+    payload,
+  };
 }
 
 export default function reducer(state = [], action = {}) {
-  console.log(action.payload)
+  console.log(action.payload);
   switch (action.type) {
     case GET_BIKES_FULFILLED:
       return { worldwideBikeList: [action.payload.networks] };
