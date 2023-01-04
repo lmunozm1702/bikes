@@ -10,6 +10,7 @@ const EUROPE = ['BE', 'BG', 'CZ', 'DK', 'DE', 'EE', 'IE', 'EL', 'ES', 'FR', 'HR'
 const initialState = {
   isDetailSelected: false,
   citiesBikeList: {},
+  selectedCountry: '',
 };
 
 function getBikes(payload) {
@@ -56,6 +57,7 @@ export default function reducer(state = initialState, action = {}) {
         ...state,
         citiesBikeList: { ...bikesGrouped },
         isDetailSelected: true,
+        selectedCountry: action.payload,
       };
     case BACK_TO_CONTINENT:
       return {

@@ -5,7 +5,7 @@ import './App.css';
 import store from './app/store';
 import getBikeList from './features/bikeList/bikeListAPI';
 
-function App() {
+export default function App() {
   useEffect(() => {
     store.dispatch(getBikeList());
   });
@@ -18,5 +18,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

@@ -1,0 +1,40 @@
+.city {
+  display: flex;
+}
+
+.city-map {
+  width: 50vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.city-info {
+  width: 50vh;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 10px;
+}
+
+.city-metrics {
+  padding-bottom: 7vh;
+}
+
+.city-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12.5vh;
+  padding: 0 10px;
+}
+
+.city-item:nth-child(2n + 2) {
+  background-color: #3f62a4;
+}
+
+.city-detail {
+  display: flex;
+  align-items: center;
+}

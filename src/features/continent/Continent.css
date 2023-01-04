@@ -1,0 +1,98 @@
+.continent-img {
+  width: 50vw;
+}
+
+.continent {
+  display: flex;
+  background-color: #598ae6;
+}
+
+.continent-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50vw;
+}
+
+.continent-item {
+  padding-left: 20px;
+}
+
+.countries-list {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4369b0;
+}
+
+.countries-item {
+  min-width: 50vw;
+  min-height: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.test {
+  background-position: center;
+  background-size: cover;
+}
+
+.test:nth-child(4n + 2) {
+  background-color: #3f62a4;
+}
+
+.test:nth-child(4n + 3) {
+  background-color: #3f62a4;
+}
+
+.country-info {
+  align-self: flex-end;
+  padding-bottom: 20px;
+  text-align: right;
+}
+
+.country-map {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.awesome-icon {
+  padding-right: 3px;
+  padding-top: 3px;
+}
+
+.country-img {
+  width: 40vw;
+}
+
+.nav-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5px;
+}
+
+.nav-continent {
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding-left: 3px;
+}
+
+.nav-title {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.nav-back {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  gap: 25px;
+}
