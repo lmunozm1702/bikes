@@ -8,7 +8,7 @@
 .continent {
   display: flex;
   background-color: #598ae6;
-  height: 40vw;
+  height: 25vw;
 }
 
 .continent-title {
@@ -68,8 +68,9 @@
 }
 
 .country-div {
-  flex: 50%;
+  width: 50%;
   background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
   height: 25vw;
   display: flex;
