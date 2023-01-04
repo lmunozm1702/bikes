@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
@@ -6,7 +7,7 @@ import { filterByCountry } from '../bikeList/BikeListReducer';
 import contNames from '../staticData';
 import '../../App.css';
 import './Continent.css';
-import europe from '../../images/europe.png';
+// import europe from '../../images/europe.png';
 
 const Continent = () => {
   const countryBikeList = useSelector((state) => state.bikeList.countryBikeList);
@@ -15,7 +16,8 @@ const Continent = () => {
 
   const countryHandleClick = (event) => {
     event.preventDefault();
-    dispatch(filterByCountry(event.target.id));
+    console.log(event.nativeEvent.submitter.id);
+    dispatch(filterByCountry(event.nativeEvent.submitter.id));
   };
 
   return (
@@ -33,9 +35,7 @@ const Continent = () => {
       </div>
 
       <div className="continent">
-        <div className="continent-img">
-          <img src={europe} alt="europe" />
-        </div>
+        <div className="continent-img" style={{ backgroundImage: 'url(/img/europe.png)' }} />
         <div className="continent-title">
           <div className="continent-item title">EUROPE</div>
           <div className="continent-item title-metrics">
@@ -48,24 +48,21 @@ const Continent = () => {
       <div className="title-bar title-metrics">
         INFO BY COUNTRY
       </div>
-      <ul className="countries-list">
-        {countryBikeList
-          && Object.keys(countryBikeList).map((country) => (
-            <li className="test" key={country} style={{ backgroundImage: `url(/img/${country}.png)` }}>
-              <div className="countries-item" role="button" id={country} onClick={countryHandleClick} onKeyDown={countryHandleClick} tabIndex={0}>
-                <div className="country-map">
-                  <div className="awesome-icon"><FontAwesomeIcon icon={faArrowAltCircleRight} /></div>
+
+      <div className="country-container">
+        <form className="country-form" onSubmit={countryHandleClick}>
+          {countryBikeList
+            && Object.keys(countryBikeList).map((country) => (
+              <button type="submit" id={country} className="country-div" key={country} style={{ backgroundImage: `url(/img/${country}.png)` }}>
+                <div id={country} className="div-info"><div id={country} className="awesome-icon"><FontAwesomeIcon id={country} icon={faArrowAltCircleRight} /></div></div>
+                <div className="div-info">
+                  <div><span id={country} className="title">{contNames[country].toUpperCase()}</span></div>
+                  <div><span id={country} className="title-metrics">{countryBikeList[country].length}</span></div>
                 </div>
-                <div className="country-info">
-                  <div className="title" id={country}>
-                    {contNames[country].toUpperCase()}
-                  </div>
-                  <div className="title-metrics" id={country}>{countryBikeList[country].length}</div>
-                </div>
-              </div>
-            </li>
-          ))}
-      </ul>
+              </button>
+            ))}
+        </form>
+      </div>
     </>
   );
 };

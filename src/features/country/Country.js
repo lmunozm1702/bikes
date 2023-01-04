@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
@@ -30,7 +31,6 @@ const Country = () => {
           <div><FontAwesomeIcon icon={faGear} /></div>
         </div>
       </div>
-
       <div className="city">
         <div className="city-map" style={{ backgroundImage: `url(/img/${country}.png)` }} />
         <div className="city-info">

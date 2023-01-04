@@ -1,10 +1,14 @@
 .continent-img {
   width: 50vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .continent {
   display: flex;
   background-color: #598ae6;
+  height: 40vw;
 }
 
 .continent-title {
@@ -19,53 +23,9 @@
   padding-left: 20px;
 }
 
-.countries-list {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #4369b0;
-}
-
-.countries-item {
-  min-width: 50vw;
-  min-height: 50vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.test {
-  background-position: center;
-  background-size: cover;
-}
-
-.test:nth-child(4n + 2) {
-  background-color: #3f62a4;
-}
-
-.test:nth-child(4n + 3) {
-  background-color: #3f62a4;
-}
-
-.country-info {
-  align-self: flex-end;
-  padding-bottom: 20px;
-  text-align: right;
-}
-
-.country-map {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 5px;
-  padding-top: 5px;
-}
-
 .awesome-icon {
   padding-right: 3px;
   padding-top: 3px;
-}
-
-.country-img {
-  width: 40vw;
 }
 
 .nav-status {
@@ -95,4 +55,43 @@
 .nav-right {
   display: flex;
   gap: 25px;
+}
+
+.country-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-div {
+  flex: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  border: 0;
+  color: white;
+  background-color: #4369b0;
+  z-index: 10;
+}
+
+.country-div:nth-child(4n + 2) {
+  background-color: #3f62a4;
+}
+
+.country-div:nth-child(4n + 3) {
+  background-color: #3f62a4;
+}
+
+.div-info {
+  padding: 0 10px 10px 0;
+  text-align: right;
+  z-index: 0;
 }
