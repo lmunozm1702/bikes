@@ -16,7 +16,6 @@ const Continent = () => {
 
   const countryHandleClick = (event) => {
     event.preventDefault();
-    console.log(event.nativeEvent.submitter.id);
     dispatch(filterByCountry(event.nativeEvent.submitter.id));
   };
 

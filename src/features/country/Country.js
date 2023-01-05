@@ -35,7 +35,7 @@ const Country = () => {
         <div className="city-map" style={{ backgroundImage: `url(/img/${country}.png)` }} />
         <div className="city-info">
           <div className="title" id={country}>
-            {contNames[country].toUpperCase()}
+            {contNames[country] ? contNames[country].toUpperCase() : null}
           </div>
           <div className="title-metrics city-metrics" id={country}>
             {countryBikeList[country].length}

@@ -1,11 +1,13 @@
 .city {
   display: flex;
+  justify-content: center;
 }
 
 .city-map {
   width: 50vh;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .city-info {
@@ -16,6 +18,12 @@
   justify-content: flex-end;
   align-items: flex-end;
   padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .city-info {
+    align-items: flex-start;
+  }
 }
 
 .city-metrics {
