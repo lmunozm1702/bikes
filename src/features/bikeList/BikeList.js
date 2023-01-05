@@ -9,10 +9,10 @@ const BikeList = () => {
 
   return (
     <>
-      <div className={isDetailSelected ? 'hidden' : 'continent-result'}>
+      <div id="continent-div" className={isDetailSelected ? 'hidden' : 'continent-result'}>
         <Continent />
       </div>
-      <div className={isDetailSelected ? 'country-result' : 'hidden'}>
+      <div id="country-div" className={isDetailSelected ? 'country-result' : 'hidden'}>
         <Country />
       </div>
     </>

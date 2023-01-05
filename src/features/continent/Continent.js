@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import { faChevronLeft, faGear, faMicrophone } from '@fortawesome/free-solid-svg-icons';
-import { filterByCountry } from '../bikeList/BikeListReducer';
+import { filterByCountry } from '../bikeList/bikeListReducer';
 import contNames from '../staticData';
 import '../../App.css';
 import './Continent.css';
@@ -48,7 +48,7 @@ const Continent = () => {
         INFO BY COUNTRY
       </div>
 
-      <div className="country-container">
+      <div id="country-container-div" className="country-container">
         <form className="country-form" onSubmit={countryHandleClick}>
           {countryBikeList
             && Object.keys(countryBikeList).map((country) => (

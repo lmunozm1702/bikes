@@ -70,5 +70,5 @@ export default function reducer(state = initialState, action = {}) {
 }
 
 export {
-  GET_BIKES, getBikes, FILTER_BY_COUNTRY, filterByCountry, backToContinent,
+  GET_BIKES, getBikes, FILTER_BY_COUNTRY, filterByCountry, backToContinent, BACK_TO_CONTINENT,
 };

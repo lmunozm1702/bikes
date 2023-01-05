@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import { faChevronLeft, faGear, faMicrophone } from '@fortawesome/free-solid-svg-icons';
-import { backToContinent } from '../bikeList/BikeListReducer';
+import { backToContinent } from '../bikeList/bikeListReducer';
 import contNames from '../staticData';
 import './Country.css';
 
@@ -31,16 +31,18 @@ const Country = () => {
           <div><FontAwesomeIcon icon={faGear} /></div>
         </div>
       </div>
-      <div className="city">
+      <div id="city-container-div" className="city">
         <div className="city-map" style={{ backgroundImage: `url(/img/${country}.png)` }} />
         <div className="city-info">
           <div className="title" id={country}>
             {contNames[country] ? contNames[country].toUpperCase() : null}
           </div>
           <div className="title-metrics city-metrics" id={country}>
-            {countryBikeList[country].length}
+            {countryBikeList
+              && countryBikeList[country] ? countryBikeList[country].length : 0}
             {' '}
-            {countryBikeList[country].length === 1 ? 'company' : 'companies'}
+            {countryBikeList
+              && countryBikeList[country].length === 1 ? 'company' : 'companies'}
           </div>
         </div>
       </div>
