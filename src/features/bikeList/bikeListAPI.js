@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getBikes, GET_BIKES } from './bikeListReducer';
 
-const BIKES_URL = 'http://api.citybik.es/v2/networks';
+const BIKES_URL = 'https://api.citybik.es/v2/networks';
 
 const getBikeList = createAsyncThunk(GET_BIKES, async (_, thunkAPI) => {
   const response = await fetch(BIKES_URL, {
