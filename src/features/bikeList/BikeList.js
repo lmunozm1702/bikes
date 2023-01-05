@@ -12,7 +12,7 @@ const BikeList = () => {
         <Continent />
       </div>
       <div id="country-div" className={isDetailSelected ? 'country-result' : 'hidden'}>
-        <Country />
+        {isDetailSelected ? <Country /> : null}
       </div>
     </>
   );
