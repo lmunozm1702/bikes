@@ -5,7 +5,6 @@ const BACK_TO_CONTINENT = 'bikesList/backToContinent';
 const _ = require('lodash');
 
 const EUROPE = ['BE', 'BG', 'CZ', 'DK', 'DE', 'EE', 'IE', 'EL', 'ES', 'FR', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO', 'SI', 'SK', 'FI', 'SE'];
-// const COUNTRIES = ['IT'];
 
 const initialState = {
   isDetailSelected: false,

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
@@ -7,7 +6,6 @@ import { filterByCountry } from '../bikeList/bikeListReducer';
 import contNames from '../staticData';
 import '../../App.css';
 import './Continent.css';
-// import europe from '../../images/europe.png';
 
 const Continent = () => {
   const countryBikeList = useSelector((state) => state.bikeList.countryBikeList);
