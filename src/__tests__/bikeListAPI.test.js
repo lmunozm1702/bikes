@@ -1,4 +1,4 @@
-import getBikeList from '../features/bikeList/bikeListAPI';
+import getBikeList from '../Redux/bikeListSlice';
 
 it('Expects getBikes get a function', () => {
   let bikesList = {};

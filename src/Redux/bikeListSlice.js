@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getBikes, GET_BIKES } from './bikeListReducer';
+import { getBikes, GET_BIKES } from '../Component/bikeListReducer';
 
 const BIKES_URL = 'https://api.citybik.es/v2/networks';
 

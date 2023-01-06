@@ -1,21 +1,35 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import { faChevronLeft, faGear, faMicrophone } from '@fortawesome/free-solid-svg-icons';
-import { filterByCountry } from '../bikeList/bikeListReducer';
-import contNames from '../staticData';
-import '../../App.css';
+import { filterByCountry } from '../Component/bikeListReducer';
+import contNames from './staticData';
+import './App.css';
 import './Continent.css';
 
 const Continent = () => {
   const countryBikeList = useSelector((state) => state.bikeList.countryBikeList);
   const totalProviders = useSelector((state) => state.bikeList.totalProviders);
+  const isDetailSelected = useSelector((state) => state.bikeList.isDetailSelected);
+  const country = useSelector((state) => state.bikeList.selectedCountry);
+
   const dispatch = useDispatch();
 
   const countryHandleClick = (event) => {
     event.preventDefault();
     dispatch(filterByCountry(event.nativeEvent.submitter.id));
   };
+
+  if (isDetailSelected) {
+    return (
+      <Navigate
+        to={{
+          pathname: `/:${country}`,
+        }}
+      />
+    );
+  }
 
   return (
     <>

@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import bikeList from '../features/bikeList/bikeListReducer';
+import bikeList from '../Component/bikeListReducer';
 
 const store = configureStore({
   reducer: {

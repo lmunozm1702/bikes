@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import BikeList from './features/bikeList/BikeList';
+import Country from './Country';
+import Continent from './Continent';
 import './App.css';
-import store from './app/store';
-import getBikeList from './features/bikeList/bikeListAPI';
+import store from '../Redux/configureStore';
+import getBikeList from '../Redux/bikeListSlice';
 
 export default function App() {
   useEffect(() => {
@@ -13,7 +14,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<BikeList />} />
+        <Route path="/" element={<Continent />} />
+        <Route path="/:country_id" element={<Country />} />
       </Routes>
     </BrowserRouter>
   );

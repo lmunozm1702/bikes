@@ -1,6 +1,6 @@
 import {
   GET_BIKES, getBikes, FILTER_BY_COUNTRY, filterByCountry, backToContinent, BACK_TO_CONTINENT,
-} from '../features/bikeList/bikeListReducer';
+} from '../Component/bikeListReducer';
 
 it('Expect GET_BYKES type returned', () => {
   const result = getBikes(1);
